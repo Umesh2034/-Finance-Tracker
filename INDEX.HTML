@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+
+        <!-- Summary Section -->
+        <div class="summary">
+            <div class="total-income">
+                <h3>Total Income</h3>
+                <p id="total-income">$0.00</p>
+            </div>
+            <div class="total-expenses">
+                <h3>Total Expenses</h3>
+                <p id="total-expenses">$0.00</p>
+            </div>
+            <div class="total-savings">
+                <h3>Total Savings</h3>
+                <p id="total-savings">$0.00</p>
+            </div>
+        </div>
+
+        <!-- History Section -->
+        <h3>Transaction History</h3>
+        <table id="history">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-list"></tbody>
+        </table>
+
+        <!-- Add Transaction Form -->
+        <h3>Add New Transaction</h3>
+        <form id="transaction-form">
+            <div class="form-control">
+                <label for="description">Description</label>
+                <input type="text" id="description" placeholder="Enter description..." required>
+            </div>
+            <div class="form-control">
+                <label for="type">Type</label>
+                <select id="type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount..." required>
+            </div>
+            <div class="form-control">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+            <button type="submit" class="btn">Add Transaction</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
